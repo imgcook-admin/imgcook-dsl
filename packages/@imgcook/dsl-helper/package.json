@@ -1,6 +1,6 @@
 {
   "name": "@imgcook/dsl-helper",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.0",
   "description": "dsl helper for davinci system（imgcook.taobao.org）",
   "main": "dist/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@imgcook/dsl-css-processor": "*",
+    "@imgcook/dsl-css-processor": "^0.0.1-alpha.0",
     "acorn": "^6.1.1",
     "acorn-jsx": "^5.0.1",
     "babel-preset-stage-3": "^6.24.1",
