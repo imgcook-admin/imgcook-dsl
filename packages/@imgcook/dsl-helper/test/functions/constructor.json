@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "parser": "Reg",
+    "args": [
+      "props"
+    ],
+    "params": [
+      {
+        "argsName": "props",
+        "argsContent": "props",
+        "argsType": "Identifier"
+      }
+    ],
+    "content": "  super(props);\n  const { spmA, spmB, spmC } = props;\n  this.spmFull = [spmA, spmB, spmC].join('.');",
+    "genContent": "  super(props);\n  const { spmA, spmB, spmC } = props;\n  this.spmFull = [spmA, spmB, spmC].join('.');",
+    "return": []
+  }
+}

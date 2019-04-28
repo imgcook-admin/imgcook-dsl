@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "parser": "Acorn",
+    "args": [],
+    "params": [],
+    "content": "  let attrs = this.props.attrs;\n  return (attrs && attrs.picType === 'true') || attrs.picType === true;",
+    "genContent": "  let attrs = this.props.attrs;\n  return attrs && attrs.picType === 'true' || attrs.picType === true;",
+    "return": []
+  }
+}

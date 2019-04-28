@@ -1,0 +1,28 @@
+{
+  "name": "@imgcook/dsl-css-processor",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mdn-data": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.6.0",
+    "mdn-data": "^2.0.0",
+    "regenerator-runtime": "^0.12.1",
+    "stylesheet-loader": "^0.6.5",
+    "weex-styler": "^0.3.1"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/",
+    "access": "public"
+  }
+}

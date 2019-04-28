@@ -1,0 +1,166 @@
+[
+	{
+		"type": "line",
+		"parts": [
+			"'use strict';"
+		]
+	},
+	{
+		"type": "line",
+		"parts": [
+			"import styles from './lib/style.js';"
+		]
+	},
+	{
+		"type": "line",
+		"parts": [
+			""
+		]
+	},
+	{
+		"type": "line",
+		"parts": [
+			"class Mod extends Component {"
+		]
+	},
+	{
+		"type": "line",
+		"parts": [
+			"// 注释"
+		],
+		"indent": {
+			"tab": 1,
+			"space": 2
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			"static disableModuleDataAutoFetch = false;"
+		],
+		"indent": {
+			"tab": 1,
+			"space": 3
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			""
+		]
+	},
+	{
+		"type": "line",
+		"parts": [
+			"render() {"
+		],
+		"indent": {
+			"tab": 1
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			"let {"
+		],
+		"indent": {
+			"tab": 2
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			"benifit"
+		],
+		"indent": {
+			"tab": 3
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			"} = this.props.attrs;"
+		],
+		"indent": {
+			"tab": 2
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			"return ("
+		],
+		"indent": {
+			"tab": 2
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			"<View"
+		],
+		"indent": {
+			"tab": 3
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			"append=\"tree\""
+		],
+		"indent": {
+			"tab": 4
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			">"
+		],
+		"indent": {
+			"tab": 3
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			"<Text>12345</Text>"
+		],
+		"indent": {
+			"tab": 4
+		}
+	},	
+	{
+		"type": "line",
+		"parts": [
+			"</View>"
+		],
+		"indent": {
+			"tab": 3
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			");"
+		],
+		"indent": {
+			"tab": 2
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			"}"
+		],
+		"indent": {
+			"tab": 1
+		}
+	},
+	{
+		"type": "line",
+		"parts": [
+			"}"
+		]
+	}	
+]
