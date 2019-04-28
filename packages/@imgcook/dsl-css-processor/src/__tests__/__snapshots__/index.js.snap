@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`web processor should function normally 1`] = `
+Object {
+  "backgroundImage": "0px",
+  "color": "#FF5E28",
+  "flexDirection": "column",
+  "fontSize": 20,
+  "letterSpacing": "0",
+  "lineHeight": "20rem",
+  "marginTop": 10,
+}
+`;
+
+exports[`weex processor should function normally 1`] = `
+Object {
+  "backgroundImage": "0px",
+  "color": "#FF5E28",
+  "flexDirection": "column",
+  "fontSize": 20,
+  "lineHeight": "20rem",
+  "lines": 1,
+  "marginTop": 10,
+}
+`;

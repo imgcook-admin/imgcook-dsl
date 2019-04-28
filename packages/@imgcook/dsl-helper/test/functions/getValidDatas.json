@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "parser": "Acorn",
+    "args": [
+      "datas",
+      "max"
+    ],
+    "params": [
+      {
+        "argsName": "datas",
+        "argsContent": "datas",
+        "argsType": "Identifier"
+      },
+      {
+        "argsName": "max",
+        "argsContent": "max",
+        "argsType": "Identifier"
+      }
+    ],
+    "content": "  const { hasLastLocation } = this.props && this.props.attrs;\n  if (hasLastLocation === true || hasLastLocation === 'true') {\n    if (datas.length === 1 && datas[0].tail === 'true') {\n      datas[1] = { isLastLocation: true };\n      return datas;\n    } else if (datas.length >= max) {\n      if (datas[1].tail === 'true') {\n        datas[1].isLastLocation = true;\n      }\n      return datas.slice(0, max);\n    } else {\n      return null;\n    }\n  } else {\n    return datas.length >= max ? datas.slice(0, max) : null;\n  }",
+    "genContent": "  const {hasLastLocation} = this.props && this.props.attrs;\n  if (hasLastLocation === true || hasLastLocation === 'true') {\n    if (datas.length === 1 && datas[0].tail === 'true') {\n      datas[1] = { isLastLocation: true };\n      return datas;\n    } else if (datas.length >= max) {\n      if (datas[1].tail === 'true') {\n        datas[1].isLastLocation = true;\n      }\n      return datas.slice(0, max);\n    } else {\n      return null;\n    }\n  } else {\n    return datas.length >= max ? datas.slice(0, max) : null;\n  }",
+    "return": []
+  }
+}

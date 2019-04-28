@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "parser": "Acorn",
+    "args": [
+      "args1",
+      "args2"
+    ],
+    "params": [
+      {
+        "argsName": "args1",
+        "argsContent": "args1",
+        "argsType": "Identifier"
+      },
+      {
+        "argsName": "args2",
+        "argsContent": "args2 = {}",
+        "argsType": "AssignmentPattern"
+      }
+    ],
+    "content": "\tlet text = 'hello world';\n\treturn {\n\t\targ1,\n\t\targs2: text,\n\t}",
+    "genContent": "  let text = 'hello world';\n  return {\n    arg1,\n    args2: text\n  };",
+    "return": [
+      {
+        "key": "arg1",
+        "valueType": "Identifier"
+      },
+      {
+        "key": "args2",
+        "valueType": "Identifier"
+      }
+    ]
+  }
+}

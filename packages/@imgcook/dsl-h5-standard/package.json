@@ -1,0 +1,20 @@
+{
+  "name": "@imgcook/dsl-h5-standard",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/dsl-test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@imgcook/dsl-utils": "^0.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.6"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "private": true
+}

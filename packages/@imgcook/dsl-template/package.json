@@ -1,0 +1,29 @@
+{
+  "name": "@imgcook/dsl-template",
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-stage-0": "^7.0.0",
+    "co": "4.x.x",
+    "lodash": ">=4.17.11",
+    "prettier": "^1.11.1",
+    "thunkify": "2.x.x",
+    "vm2": "^3.5.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "xml-beautifier": "0.x.x",
+    "xtemplate": "4.x.x",
+    "xtpl": "3.x.x"
+  },
+  "scripts": {
+    "debug": "npx webpack --config webpack.config.js --mode=development",
+    "build": "npx webpack --config webpack.config.js --mode=production",
+    "test": "node ./test/index.js"
+  },
+  "dependencies": {
+    "@webpack-cli/init": "^0.1.5"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "private": true
+}

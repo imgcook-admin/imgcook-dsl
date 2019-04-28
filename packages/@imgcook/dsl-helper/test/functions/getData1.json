@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "parser": "Acorn",
+    "args": [
+      "args1",
+      "args2",
+      "arg3"
+    ],
+    "params": [
+      {
+        "argsName": "args1",
+        "argsContent": "args1",
+        "argsType": "Identifier"
+      },
+      {
+        "argsName": "args2",
+        "argsContent": "args2 = 123",
+        "argsType": "AssignmentPattern"
+      },
+      {
+        "argsName": "arg3",
+        "argsContent": "arg3 = {}",
+        "argsType": "AssignmentPattern"
+      }
+    ],
+    "content": "  // 数据源\n  const attrs = {};\n  const data = {};\n  const pageInfo = {};\n  // 数据源整合\n  const { moduleDataSource } = this.props && this.props.data;\n  const datas = this.getValidDatas(moduleDataSource, 2);\n  if (datas === null) {\n    attrs.isValid = false;\n  } else {\n    attrs.isValid = true;\n  }\n  const expInfoProps = getExpInfo({\n    data: datas,\n    spmFull: this.spmFull,\n  });\n  attrs.expInfoProps = expInfoProps;\n  attrs.spmC = this.props.spmC;\n  // getViews\n  data.itemList = datas.map((data, index) => {\n    const isSquare = this.isSquare();\n    const itemPic = isSquare ? data.item_pic : data.item_long_pic;\n    const picStyle = {\n      height: isSquare ? 342 : 456\n    };\n    const wrapStyle = {\n      height: isSquare ? 564 : 678\n    };\n    const favoriteStyle = !isSquare && { top: 424 };\n    // 埋点信息\n    const spmlinkProps = getSpmlinkProps({\n      data,\n      spmC: this.props.spmC,\n      spmFull: this.spmFull,\n      index\n    });\n    const { activityPic, hasLastLocation, pageStatus } = this.props.attrs;\n    // 开启末坑位\n    if (hasLastLocation === true || hasLastLocation === 'true') {\n      // data.isLastLocation === true ， 则为末坑位\n      if (data.isLastLocation === true) {\n        const { lastPicUrl, lastPicHref } = this.props.attrs;\n        return {\n          index: index,\n          notLastLocation: false,\n          isLastLocation: true,\n          lastPicHref,\n          lastPicUrl,\n\n          'data_spm_c': spmlinkProps[ 'data-spm-c' ],\n          'data_spm_d': spmlinkProps[ 'data-spm-d' ],\n          accessible: spmlinkProps.accessible,\n          onPress: spmlinkProps.onPress, // TODO review下此种写法绑定出的是否有问题\n          'data_ut': spmlinkProps['data-ut'],\n\n          wrapStyle: wrapStyle,\n        };\n      }\n    }\n    return {\n      ...data,\n      notLastLocation: true,\n      index: index,\n      itemPic: itemPic,\n      activityPic: activityPic,\n      pageStatus: pageStatus,\n      pageStatusCardText: pageStatus === 'pre' ? '加入购物车' : '立即抢购',\n      showCountText: ((item) => {\n        if (this.props.attrs.pageStatus === 'pre') {\n          return item.item_favorite && item.item_favorite != '0'\n            ? `想买人气${item.item_favorite}`\n            : '火热加购中';\n        } else {\n          return item.item_trade_num && item.item_trade_num != '0'\n            ? `已售${item.item_trade_num}件`\n            : '火热加购中';\n        }\n      })(data),\n      getLiveOrRedPacket: ((item = {}, spmlinkProps = {}) => {\n        const { shop_live_status = '0', shop_hongbao_status = '0' } = item;\n        let href = item.shop_hongbao_url,\n          uri,\n          picStyle = styles.picture5,\n          picWrapStyle = styles.topLivePicWrap5;\n        // 红包待发放\n        if (shop_hongbao_status === '1') {\n          uri = 'https://img.alicdn.com/tfs/TB1hDvCd5rpK1RjSZFhXXXSdXXa-194-46.png';\n          // 红包发放中\n        } else if (shop_hongbao_status === '2') {\n          uri = 'https://img.alicdn.com/tfs/TB1XujUd4jaK1RjSZKzXXXVwXXa-194-46.png';\n        } else if (shop_live_status === '1') {\n          href = item.shop_live_url;\n          uri = 'https://img.alicdn.com/tfs/TB1tnjzd6DpK1RjSZFrXXa78VXa-123-46.png';\n          picStyle = styles.picture;\n          picWrapStyle = styles.topLivePicWrap;\n        }\n        return {\n          href,\n          picStyle,\n          uri,\n        };\n      })(data, spmlinkProps),\n      getMaxLengthStr: ((str, max) => {\n        return str && str.length !== 0 ? str.substring(0, max) : '';\n      })(data.item_title, 12),\n      getBottomLeftBtn: ((item) => {\n        const { pageStatus } = this.props.attrs;\n        if (\n          pageStatus === 'pre' &&\n          (item.has_hongbao === 'true' || item.has_hongbao === true)\n        ) {\n          return '进店抢红包';\n        } else {\n          return '进入店铺';\n        }\n      })(data), \n\n      'data_spm_c': spmlinkProps[ 'data-spm-c' ],\n      'data_spm_d': spmlinkProps[ 'data-spm-d' ],\n      accessible: spmlinkProps.accessible,\n      onPress: spmlinkProps.onPress, // TODO review下此种写法绑定出的是否有问题\n      'data_ut': spmlinkProps['data-ut'],\n\n      wrapStyle: wrapStyle,\n      picStyle: picStyle,\n      favoriteStyle: favoriteStyle,\n    };\n    \n  });\n\n  // 数据源\n  return {\n    data: {a: '21311'},\n    attrs: 12131,\n    pageInfo,\n  };",
+    "genContent": "  const attrs = {};\n  const data = {};\n  const pageInfo = {};\n  const {moduleDataSource} = this.props && this.props.data;\n  const datas = this.getValidDatas(moduleDataSource, 2);\n  if (datas === null) {\n    attrs.isValid = false;\n  } else {\n    attrs.isValid = true;\n  }\n  const expInfoProps = getExpInfo({\n    data: datas,\n    spmFull: this.spmFull\n  });\n  attrs.expInfoProps = expInfoProps;\n  attrs.spmC = this.props.spmC;\n  data.itemList = datas.map((data, index) => {\n    const isSquare = this.isSquare();\n    const itemPic = isSquare ? data.item_pic : data.item_long_pic;\n    const picStyle = { height: isSquare ? 342 : 456 };\n    const wrapStyle = { height: isSquare ? 564 : 678 };\n    const favoriteStyle = !isSquare && { top: 424 };\n    const spmlinkProps = getSpmlinkProps({\n      data,\n      spmC: this.props.spmC,\n      spmFull: this.spmFull,\n      index\n    });\n    const {activityPic, hasLastLocation, pageStatus} = this.props.attrs;\n    if (hasLastLocation === true || hasLastLocation === 'true') {\n      if (data.isLastLocation === true) {\n        const {lastPicUrl, lastPicHref} = this.props.attrs;\n        return {\n          index: index,\n          notLastLocation: false,\n          isLastLocation: true,\n          lastPicHref,\n          lastPicUrl,\n          'data_spm_c': spmlinkProps['data-spm-c'],\n          'data_spm_d': spmlinkProps['data-spm-d'],\n          accessible: spmlinkProps.accessible,\n          onPress: spmlinkProps.onPress,\n          'data_ut': spmlinkProps['data-ut'],\n          wrapStyle: wrapStyle\n        };\n      }\n    }\n    return {\n      ...data,\n      notLastLocation: true,\n      index: index,\n      itemPic: itemPic,\n      activityPic: activityPic,\n      pageStatus: pageStatus,\n      pageStatusCardText: pageStatus === 'pre' ? '加入购物车' : '立即抢购',\n      showCountText: (item => {\n        if (this.props.attrs.pageStatus === 'pre') {\n          return item.item_favorite && item.item_favorite != '0' ? `想买人气${ item.item_favorite }` : '火热加购中';\n        } else {\n          return item.item_trade_num && item.item_trade_num != '0' ? `已售${ item.item_trade_num }件` : '火热加购中';\n        }\n      })(data),\n      getLiveOrRedPacket: ((item = {}, spmlinkProps = {}) => {\n        const {shop_live_status = '0', shop_hongbao_status = '0'} = item;\n        let href = item.shop_hongbao_url, uri, picStyle = styles.picture5, picWrapStyle = styles.topLivePicWrap5;\n        if (shop_hongbao_status === '1') {\n          uri = 'https://img.alicdn.com/tfs/TB1hDvCd5rpK1RjSZFhXXXSdXXa-194-46.png';\n        } else if (shop_hongbao_status === '2') {\n          uri = 'https://img.alicdn.com/tfs/TB1XujUd4jaK1RjSZKzXXXVwXXa-194-46.png';\n        } else if (shop_live_status === '1') {\n          href = item.shop_live_url;\n          uri = 'https://img.alicdn.com/tfs/TB1tnjzd6DpK1RjSZFrXXa78VXa-123-46.png';\n          picStyle = styles.picture;\n          picWrapStyle = styles.topLivePicWrap;\n        }\n        return {\n          href,\n          picStyle,\n          uri\n        };\n      })(data, spmlinkProps),\n      getMaxLengthStr: ((str, max) => {\n        return str && str.length !== 0 ? str.substring(0, max) : '';\n      })(data.item_title, 12),\n      getBottomLeftBtn: (item => {\n        const {pageStatus} = this.props.attrs;\n        if (pageStatus === 'pre' && (item.has_hongbao === 'true' || item.has_hongbao === true)) {\n          return '进店抢红包';\n        } else {\n          return '进入店铺';\n        }\n      })(data),\n      'data_spm_c': spmlinkProps['data-spm-c'],\n      'data_spm_d': spmlinkProps['data-spm-d'],\n      accessible: spmlinkProps.accessible,\n      onPress: spmlinkProps.onPress,\n      'data_ut': spmlinkProps['data-ut'],\n      wrapStyle: wrapStyle,\n      picStyle: picStyle,\n      favoriteStyle: favoriteStyle\n    };\n  });\n  return {\n    data: { a: '21311' },\n    attrs: 12131,\n    pageInfo\n  };",
+    "return": [
+      {
+        "key": "data",
+        "valueType": "ObjectExpression"
+      },
+      {
+        "key": "attrs",
+        "valueType": "Literal"
+      },
+      {
+        "key": "pageInfo",
+        "valueType": "Identifier"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@imgcook/dsl-utils",
+  "version": "0.0.0",
+  "description": "dsl utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "private": true,
+  "license": "ISC"
+}
