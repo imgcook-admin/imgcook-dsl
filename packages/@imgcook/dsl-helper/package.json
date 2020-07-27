@@ -16,12 +16,12 @@
     "@imgcook/dsl-css-processor": "^0.0.1-alpha.0",
     "acorn": "^6.1.1",
     "acorn-jsx": "^5.0.1",
-    "babel-preset-stage-3": "^6.24.1",
     "escodegen": "^1.11.1",
     "lodash": "^4.17.11"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-preset-stage-3": "^6.24.1",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",

@@ -8,7 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@imgcook/dsl-utils": "^0.0.1"
+    "@imgcook/dsl-utils": "^0.0.1-alpha.0"
   },
   "devDependencies": {
     "webpack": "^4.29.6"
