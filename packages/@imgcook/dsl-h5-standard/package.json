@@ -14,7 +14,7 @@
     "webpack": "^4.29.6"
   },
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
-  },
-  "private": true
+    "registry": "http://registry.npmjs.org/",
+    "access": "public"
+  }
 }
