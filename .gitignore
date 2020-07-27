@@ -4,4 +4,3 @@ demo
 lerna-debug.log
 my-test-repo
 .vscode
-package-lock.json
