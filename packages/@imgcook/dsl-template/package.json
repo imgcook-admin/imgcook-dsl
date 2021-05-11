@@ -4,7 +4,7 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-stage-0": "^7.0.0",
     "co": "4.x.x",
-    "lodash": ">=4.17.11",
+    "lodash": ">=4.17.21",
     "prettier": "^1.11.1",
     "thunkify": "2.x.x",
     "vm2": "^3.5.2",
