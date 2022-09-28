@@ -7,7 +7,7 @@
     "lodash": ">=4.17.11",
     "prettier": "^1.11.1",
     "thunkify": "2.x.x",
-    "vm2": "^3.5.2",
+    "vm2": "^3.9.11",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1",
     "xml-beautifier": "0.x.x",
